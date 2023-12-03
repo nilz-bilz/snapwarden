@@ -42,9 +42,9 @@ Download the [ntfy.sh](https://ntfy.sh) app on your phone, and follow a specific
 	- Name of your remote as recognized by rclone.
 3. Also make sure to change the curl command for ntfy.sh. Change the email address, and change the last part of the command by entering your ntfy topic name (so that the notifications can be received on the topic you are following)
 4. Save the changes
-5. run the script with the command `bash bwexport.sh`
+5. run the script with the command `bash snapwarden.sh`
 6. Confirm that the script & notifications are working. 
-7. Setup a cron job by typing `crontab -e` and enter the cron schedule, followed by `bash /path/to/script/bwexport.sh`
+7. Setup a cron job by typing `crontab -e` and enter the cron schedule, followed by `bash /path/to/script/snapwarden.sh`
 	- Refer to [this website](https://crontab.guru/) to figure out the syntax needed for your specific job schedule. 
 	- You can setup multiple cron jobs with different versions of the script, to setup a daily, weekly, and monthly snapshots that get stored in different folders within your remote storage.
 
