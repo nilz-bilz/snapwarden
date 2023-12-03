@@ -77,10 +77,10 @@ perform_export() {
                     else
                         # Check for checksum mismatch error in rclone output
                         if grep -q "checksum mismatch" <<< "$rclone_output"; then
-                            send_notification "Bitwarden Export Failed" "Checksum mismatch detected during file transfer to S3."
+                            send_notification "Bitwarden Export Failed" "Checksum mismatch detected during file transfer to remote."
                             exit 1
                         else
-                            send_notification "Bitwarden Export Failed" "Failed to copy export files to S3 using rclone."
+                            send_notification "Bitwarden Export Failed" "Failed to copy export files to remote using rclone."
                             exit 1
                         fi
                     fi
