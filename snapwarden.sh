@@ -7,10 +7,10 @@
 export BW_CLIENTID="your_client_id"
 export BW_CLIENTSECRET="your_client_secret"
 export BW_PASSWORD="your_master_password"
-# Set these Variables
 
+# Set these Variables
 EXPORT_DIRECTORY="/path/to/exports"
-RC_REMOTE="your_rclone_crypt_remote_name"
+RC_REMOTE="crypt_remote:/folder/path"
 
 # Leave these as is
 TODAY=$(date '+%Y-%m-%d_%H-%M-%S')
