@@ -6,9 +6,9 @@
 # Set Bitwarden API credentials as environment variables
 export BW_CLIENTID="your_client_id"
 export BW_CLIENTSECRET="your_client_secret"
-
+export BW_PASSWORD="your_master_password"
 # Set these Variables
-BITWARDEN_PASSWORD="your_master_password"
+
 EXPORT_DIRECTORY="/path/to/exports"
 RC_REMOTE="your_rclone_crypt_remote_name"
 
@@ -50,7 +50,7 @@ perform_export() {
     # Check if login was successful
     if [ $? -eq 0 ]; then
         # Unlock Bitwarden vault and get session key in one step
-        SESSION_KEY=$(bw unlock $BITWARDEN_PASSWORD --raw)
+        SESSION_KEY=$(bw unlock --passwordenv BW_PASSWORD --raw)
 
         # Check if session key retrieval was successful
         if [ -n "$SESSION_KEY" ]; then
